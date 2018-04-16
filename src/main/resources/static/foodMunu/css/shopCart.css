@@ -1,0 +1,189 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+body {
+	background: url(../images/t.jpg) no-repeat;
+	background-size: cover;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;
+}
+
+.shopBox {
+	position: absolute;
+	top: 100px;
+	right: 100px;
+	bottom: 100px;
+	left: 100px;
+	background-color: #4b4b4b;
+	border-radius: 27px;
+	opacity: 0.8;
+	/*padding: 60px;*/
+}
+
+.shopForm {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border: 1px #333532 solid;
+	border-radius: 27px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.shopPay {
+	position: relative;
+	margin-top: 7%;
+	left: 60%;
+	width: 40%;
+	height: 120px;
+	/*border: 1px solid #c2c4c1;*/
+	border-radius: 8px;
+}
+
+.form {
+	margin: 20px;
+}
+
+.form .table {
+	cursor: pointer;
+	width: 100%;
+	border-radius: 8px;
+}
+
+.form .table th {
+	width: 60%;
+	height: 50px;
+	border-left: 1px solid #080808;
+	border-top: 1px solid #080808;
+	border-right: 1px solid #080808;
+	border-bottom: 1px solid #080808;
+	border-radius: 8px;
+}
+
+.form .table td {
+	width: 40%;
+	border-left: 1px solid #080808;
+	border-bottom: 1px solid #080808;
+	border-right: 1px solid #080808;
+	border-radius: 8px;
+	height: 120px;
+}
+
+.form .table td span {
+	position: relative;
+	width: 100px;
+	height: 50px;
+	float: left;
+	display: block;
+	font-size: 24px;
+	left: 35%;
+	top: 22%;
+}
+
+.form .table td img {
+	position: relative;
+	float: left;
+	display: block;
+	left: 16%;
+	height: 100px;
+}
+
+.form .table td h3 {
+	text-align: center;
+	display: block;
+	position: relative;
+	float: left;
+	width: 100px;
+	height: 25px;
+	left: 20%;
+	top: 10%;
+	border-bottom: 2px solid #000000;
+}
+
+.form .table td input {
+	width: 50px;
+	height: 20px;
+	font-size: 18px;
+	text-align: center;
+	border-radius: 5px;
+	position: relative;
+	left: 30%;
+	top: 10%;
+}
+
+.form .table td a {
+	text-decoration: none;
+	color: #000000;
+	font-size: 18px;
+}
+
+.form .table a.form-A1 {
+	position: relative;
+	left: 29%;
+	top: 10%;
+}
+
+.form .table a.form-A2 {
+	position: relative;
+	left: 31%;
+	top: 10%;
+}
+
+.shopMoney {
+	position: relative;
+	top: 15%;
+	width: 40%;
+	height: 70%;
+	float: left;
+}
+
+.shopTo {
+	position: relative;
+	top: 15%;
+	width: 30%;
+	height: 70%;
+	float: left;
+}
+
+.settlement {
+	width: 29%;
+	height: 100%;
+	float: left;
+}
+
+.shopPay span {
+	position: relative;
+	left: 20%;
+	top: 40%;
+	display: block;
+	border-bottom: 3px #000000 solid;
+	height: 50%;
+	width: 70%;
+	text-align: center;
+	line-height: 55px;
+	font-size: 18px;
+}
+
+.settlement input {
+	width: 75%;
+	height: 75%;
+	position: relative;
+	top: 15%;
+	left: 15%;
+	border-radius: 17px;
+	font-size: 18px;
+	background-color: #463614;
+	border: 1px solid #aaada9;
+	cursor: pointer;
+	color: #aaada9;
+	outline: none;
+}
+
+.settlement input:hover {
+	background: #aaada9;
+	color: yellow;
+}
