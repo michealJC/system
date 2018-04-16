@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="cn-en">
+
+	<head>
+		<title>Home</title>
+		<!-- custom-theme -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="" />
+		<script type="application/x-javascript">
+			addEventListener("load", function() {
+				setTimeout(hideURLbar, 0);
+			}, false);
+
+			function hideURLbar() {
+				window.scrollTo(0, 1);
+			}
+		</script>
+
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/carousel.css" type="text/css" rel="stylesheet" media="all">
+		<link rel="stylesheet" href="css/owl.carousel.css" type="text/css" media="all" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+		<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<!--<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+		<link href="http://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">-->
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/shopping.js" type="text/javascript" charset="utf-8"></script>
+		<style>
+			/*购物车*/
+			
+			.shopping {
+				width: 150px;
+				height: 170px;
+				position: fixed;
+				z-index: 9999;
+				background: whitesmoke;
+				right: -150px;
+				bottom: 70px;
+				opacity: 0.7;
+				cursor: pointer;
+				border-radius: 8px;
+			}
+			
+			.shopping-hd {
+				text-align: center;
+				line-height: 30px;
+				width: 50px;
+				height: 100px;
+				position: relative;
+				top: -110px;
+				left: -50px;
+				border: 1px solid #09C4DC;
+				cursor: pointer;
+				font-size: 26px;
+				border-radius: 4px;
+				color: whitesmoke;
+			}
+			
+			.shopping-hd:hover {
+				border: 3px #09C4DC solid;
+				color: #09C4DC;
+			}
+			/*购物车*/
+			
+			.bubbly-button {
+				font-family: 'Helvetica', 'Arial', sans-serif;
+				display: inline-block;
+				font-size: 1em;
+				padding: 1em 2em;
+				margin-top: 100px;
+				margin-bottom: 60px;
+				-webkit-appearance: none;
+				appearance: none;
+				background-color: #D4573F;
+				color: #fff;
+				border-radius: 4px;
+				border: none;
+				cursor: pointer;
+				position: relative;
+				transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+				box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+			}
+			
+			.bubbly-button:focus {
+				outline: 0;
+			}
+			
+			.bubbly-button:before,
+			.bubbly-button:after {
+				position: absolute;
+				content: '';
+				display: block;
+				width: 140%;
+				height: 100%;
+				left: -20%;
+				z-index: -1000;
+				transition: all ease-in-out 0.5s;
+				background-repeat: no-repeat;
+			}
+			
+			.bubbly-button:before {
+				display: none;
+				top: -75%;
+				background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 20%, #ff0081 20%, transparent 30%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+				background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+			}
+			
+			.bubbly-button:after {
+				display: none;
+				bottom: -75%;
+				background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+				background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+			}
+			
+			.bubbly-button:active {
+				transform: scale(0.9);
+				background-color: #e60074;
+				box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+			}
+			
+			.bubbly-button.animate:before {
+				display: block;
+				animation: topBubbles ease-in-out 0.75s forwards;
+			}
+			
+			.bubbly-button.animate:after {
+				display: block;
+				animation: bottomBubbles ease-in-out 0.75s forwards;
+			}
+			
+			@keyframes topBubbles {
+				0% {
+					background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+				}
+				50% {
+					background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+				}
+				100% {
+					background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+					background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+				}
+			}
+			
+			@keyframes bottomBubbles {
+				0% {
+					background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+				}
+				50% {
+					background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+				}
+				100% {
+					background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+					background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="banner-header">
+			<!--header-->
+			<div class="header">
+				<div class="container-fluid">
+					<nav class="navbar navbar-default">
+						<div class="navbar-header navbar-left">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+
+		<!-- slider -->
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1" class=""></li>
+				<li data-target="#myCarousel" data-slide-to="2" class=""></li>
+				<li data-target="#myCarousel" data-slide-to="3" class=""></li>
+				<li data-target="#myCarousel" data-slide-to="4" class=""></li>
+			</ol>
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<div class="banner-dott">
+						<div class="container">
+							<div class="carousel-caption">
+								<h3>没有比这更真诚的爱了</h3>
+								<h4>爱的食物</h4>
+								<div class="contrast">
+									<!-- <p> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.</p>-->
+								</div>
+								<div class="thim-click-to-bottom">
+									<a href="#about" class="scroll">
+										<i class="fa  fa-chevron-down"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item item1">
+					<div class="banner-dott">
+						<div class="container">
+							<div class="carousel-caption">
+								<h3>食物是不理性的</h3>
+								<h4>食物是一种习惯</h4>
+								<div class="contrast">
+									<!-- <p> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.</p>-->
+								</div>
+								<div class="thim-click-to-bottom">
+									<a href="#about" class="scroll">
+										<i class="fa  fa-chevron-down"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item item2">
+					<div class="banner-dott">
+						<div class="container">
+							<div class="carousel-caption">
+								<h3>我们在每个街角都看到了 </h3>
+								<h4>它们是甜甜圈</h4>
+								<div class="contrast">
+									<!--<p> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.</p>-->
+								</div>
+								<div class="thim-click-to-bottom">
+									<a href="#about" class="scroll">
+										<i class="fa  fa-chevron-down"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item item3">
+					<div class="banner-dott">
+						<div class="container">
+							<div class="carousel-caption">
+								<h3>食物是我们的共同点 </h3>
+								<h4>一个普遍的经验 </h4>
+								<div class="contrast">
+									<!--  <p> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.</p>-->
+								</div>
+								<div class="thim-click-to-bottom">
+									<a href="#about" class="scroll">
+										<i class="fa  fa-chevron-down"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="item item4">
+					<div class="banner-dott">
+						<div class="container">
+							<div class="carousel-caption">
+								<h3>食物是我们的共同点</h3>
+								<h4>一个普遍的经验</h4>
+								<div class="contrast">
+									<!-- <p> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.</p>-->
+								</div>
+								<div class="thim-click-to-bottom">
+									<a href="#about" class="scroll">
+										<i class="fa  fa-chevron-down"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+
+		<!-- special -->
+		<div class="special">
+			<div class="container">
+				<h2 class="heading">今天 <span>特价</span></h2>
+				<p class="heading">今天的特价</p>
+				<div class="special-grids">
+					<!--第一个-->
+					<div class="col-md-6 w3l-special-grid">
+						<div class="col-md-6 w3ls-special-img" id="foot-imga">
+							<div class="w3ls-special-text effect-1">
+								<h4 id="foot-moneya">$ 12.00</h4>
+							</div>
+						</div>
+						<div class="col-md-6 agileits-special-info" id="fooda">
+							<h4 id="food-namea">凉菜卷</h4>
+							<p id="food-abouta">凉菜卷是一款生活中的美食，主要食材有胡萝卜等，是一种健康的菜谱</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<!--第二个-->
+					<div class="col-md-6 w3l-special-grid">
+						<div class="col-md-6 w3ls-special-img wthree-img1" id="food-imgb">
+							<div class="w3ls-special-text effect-1">
+								<h4 id="foot-moneyb">$ 16.00</h4>
+							</div>
+						</div>
+						<div class="col-md-6 agileits-special-info" id="foodb">
+							<h4 id="food-nameb">凉拌海带</h4>
+							<p id="food-aboutb">凉拌海带是一道菜品，制作原料主要有海带、白糖等。常食可令秀发润泽乌黑</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<!--第三个-->
+					<div class="col-md-6 w3l-special-grid">
+						<div class="col-md-6 agileits-special-info" id="foodc">
+							<h4 id="food-namec">五龙戏珠</h4>
+							<p id="food-aboutc">中国传说中，龙是一种神异动物，在阴阳宇宙观中代表阳，是中华民族的象征</p>
+						</div>
+						<div class="col-md-6 w3ls-special-img wthree-img2" id="food-imgc">
+							<div class="w3ls-special-text effect-1">
+								<h4 id="food-moneyc">$ 14.00</h4>
+							</div>
+						</div>
+
+						<div class="clearfix"> </div>
+					</div>
+					<!--第四个-->
+					<div class="col-md-6 w3l-special-grid">
+						<div class="col-md-6 agileits-special-info" id="foodd">
+							<h4 id="food-named">玉米排骨</h4>
+							<p id="food-aboutd">玉米排骨汤是一道食补汤品,主要食材是玉米和排骨,主要烹饪工艺是炖</p>
+						</div>
+						<div class="col-md-6 w3ls-special-img wthree-img3"  id="food-imgd">
+							<div class="w3ls-special-text effect-1" >
+								<h4 id="food-moneyd">$ 21.00</h4>
+							</div>
+						</div>
+
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 按钮-->
+		<div class="Special" style=" font-size: 16px;font-family: 'Helvetica', 'Arial', sans-serif;text-align: center;background-color: #f8faff;    background: url(images/slider1.jpg) no-repeat 0 0;background-size: cover;">
+			<button id="bubbly-button" class="bubbly-button" style="width: 300px; height: 100px; display: block; left: 42%; top: 38%;border: 1px solid #d4573f; border-radius: 27px; ">
+				Run Order</button>
+		</div>
+
+		<div style=" clear: both; "></div>
+
+		<div class="special" style="background: url(images/slider4.jpg) no-repeat 0 0;background-size: cover;">
+			<div class="container ">
+				<h2 class="heading" style="color:#000000;">团购 <span>优惠</span></h2>
+				<p style="color: #000000;" class="heading">团购优惠</p>
+				<div class="special-grids">
+					<!--第一个-->
+					<div class="col-md-6 w3l-special-grid">
+						<div class="col-md-6 w3ls-special-img" id="bulk-imga">
+							<div class="w3ls-special-text effect-1">
+								<h4></h4>
+							</div>
+						</div>
+						<div class="col-md-6 agileits-special-info" id="bulka">
+							<h4 id="bulk-namea">2人餐</h4>
+							<p id="bulk-abouta">一人晚餐&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+								二人世界</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<!--第二个-->
+					<div class="col-md-6 w3l-special-grid">
+						<div class="col-md-6 w3ls-special-img wthree-img1" id="bulk-imgb">
+							<div class="w3ls-special-text effect-1">
+								<h4></h4>
+							</div>
+						</div>
+						<div class="col-md-6 agileits-special-info" id="bulkb">
+							<h4 id="bulk-nameb">4人餐</h4>
+							<p id="bulk-aboutb">超值4人套餐，享受美好生活，享受更好的服务</p>
+
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<!--第三个-->
+					<div class="col-md-6 w3l-special-grid">
+						<div class="col-md-6 agileits-special-info" id="bulkc">
+							<h4 id="bulk-namec">8人餐</h4>
+							<p id="bulk-aboutc">美好时光与你们相伴，美味时刻与你分享</p>
+
+						</div>
+						<div class="col-md-6 w3ls-special-img wthree-img2" id="bulk-imgc">
+							<div class="w3ls-special-text effect-1">
+								<h4></h4>
+							</div>
+						</div>
+
+						<div class="clearfix"> </div>
+					</div>
+					<!--第四个-->
+					<div class="col-md-6 w3l-special-grid">
+						<div class="col-md-6 agileits-special-info" id="bulkd">
+							<h4 id="bulk-named">包场</h4>
+							<p id="bulk-aboutd">我包场，你请客。至尊服务，黄家待遇，期待你的到来</p>
+						</div>
+						<div class="col-md-6 w3ls-special-img wthree-img3" id="bulk-imgd">
+							<div class="w3ls-special-text effect-1">
+								<h4></h4>
+							</div>
+						</div>
+
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		<div class="shopping" id="js-shopping">
+			<img style="display: block; width: 150px; " src="images/gouwuche.png"/>
+			<div class="shopping-hd" id="js-shopping-hd">购物车</div>
+		</div>
+
+
+
+       <!--js代码-->
+		<script src="js/owl.carousel.js"></script>
+		<script>
+			var animateButton = function(e) {
+
+				e.preventDefault;
+				//reset animation
+				e.target.classList.remove('animate');
+
+				e.target.classList.add('animate');
+				setTimeout(function() {
+					e.target.classList.remove('animate');
+				}, 700);
+			};
+
+			var classname = document.getElementsByClassName("bubbly-button ");
+
+			for(var i = 0; i < classname.length; i++) {
+				classname[i].addEventListener('click', animateButton, false);
+			}
+		</script>
+		<script>
+			$(document).ready(function() {
+				$("#owl-demo ").owlCarousel({
+					items: 5,
+					lazyLoad: true,
+					autoPlay: true,
+					pagination: true,
+				});
+			});
+		</script>
+		<!-- //Owl-Carousel-JavaScript -->
+
+		<!-- flexSlider -->
+		<script defer src="js/jquery.flexslider.js "></script>
+		<script type="text/javascript ">
+			$(window).load(function() {
+				$('.flexslider').flexslider({
+					animation: "slide ",
+					start: function(slider) {
+						$('body').removeClass('loading');
+					}
+				});
+			});
+		</script>
+		<!-- //flexSlider -->
+
+		<!-- start-smoth-scrolling -->
+		<script src="js/SmoothScroll.min.js "></script>
+
+		<script type="text/javascript " src="js/move-top.js "></script>
+		<script type="text/javascript " src="js/easing.js "></script>
+		<script type="text/javascript ">
+			jQuery(document).ready(function($) {
+				$(".scroll ").click(function(event) {
+					event.preventDefault();
+					$('html,body').animate({
+						scrollTop: $(this.hash).offset().top
+					}, 1000);
+				});
+
+			});
+		</script>
+
+		<!-- here stars scrolling icon -->
+		
+		<script src="js/bootstrap.js "></script>
+		<script type="text/javascript " src="js/Math.js "></script>
+		<script src="js/index.js " type="text/javascript " charset="utf-8 "></script>
+		<!-- //for bootstrap working -->
+
+	</body>
+
+</html>

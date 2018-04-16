@@ -1,0 +1,188 @@
+	* {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	
+	body {
+		background: url(../images/t.jpg) no-repeat 0 0;
+		background-size: cover;
+		-moz-user-select: none;
+		-khtml-user-select: none;
+		user-select: none;
+	}
+	
+	.info {
+		left: 100px;
+		right: 100px;
+		top: 100px;
+		bottom: 100px;
+		position: absolute;
+	}
+	
+	.left-nav {
+		border: 1px solid;
+		border-radius: 27px;
+		position: absolute;
+		width: 200px;
+		left: 10px;
+		bottom: 50px;
+		top: 50px;
+		background-color: #4b4b4b;
+		opacity: 0.8;
+	}
+	
+	.btn-right {
+		width: 60px;
+		height: 25px;
+		border-radius: 20px;
+		position: absolute;
+		right: 2px;
+		bottom: 2px;
+		background-color: #a9a3a0;
+		cursor: pointer;
+		border: 1px #f35618;
+	}
+	
+	.infoDiv-right {
+		position: relative;
+		margin: 25px 23px 0px;
+		width: 240px;
+		height: 300px;
+		float: left;
+		border-radius: 8px;
+		border: 1px solid;
+		cursor: pointer;
+	}
+	
+	.img-right {
+		width: 240px;
+	}
+	
+	.btn-right:hover {
+		background-color: #f35618;
+		color: #cbc8c7;
+		border: 1px #a9a3a0 solid;
+	}
+	
+	.price-right {
+		display: block;
+		width: 70px;
+		height: 20px;
+		position: relative;
+		top: 55px;
+		left: 170px;
+		border-radius: 6px;
+		text-align: center;
+		color: #f35618;
+		font-size: 18px;
+	}
+	
+	.text-right {
+		width: 50px;
+		height: 20px;
+		border-radius: 5px;
+		text-align: center;
+		position: relative;
+		top: 48px;
+		left: 75px;
+		/*margin: 0 auto;*/
+	}
+	
+	.reduce-right {
+		display: block;
+		width: 20px;
+		height: 20px;
+		font-size: 20px;
+		position: relative;
+		top: 68px;
+		left: 52px;
+	}
+	
+	.add-right {
+		display: block;
+		width: 20px;
+		height: 20px;
+		position: relative;
+		top: 25px;
+		left: 133px;
+	}
+	
+	.left-nav div {
+		text-align: center;
+		width: 180px;
+		height: 50px;
+		cursor: pointer;
+		line-height: 40px;
+		margin-top: 20px;
+		font-size: 20px;
+		font-family: "微软雅黑";
+		color: #cbc8c7;
+	}
+	
+	.left-nav div:hover {
+		border-left: 10px solid #f35618;
+		color: #f35618;
+		border-radius: 8px;
+		border-right: 10px solid #f35618;
+	}
+	
+	.active {
+		border-left: 10px solid #f35618;
+		color: #f35618;
+		border-radius: 8px;
+		border-right: 10px solid #f35618;
+	}
+	
+	.right-info {
+		padding-left: 10px;
+		padding-top: 10px;
+		border-radius: 27px;
+		position: absolute;
+		bottom: 50px;
+		right: 10px;
+		left: 230px;
+		top: 50px;
+		background-color: #4b4b4b;
+		opacity: 0.8;
+	}
+	
+	.a {
+		overflow-y: auto;
+		width: 100%;
+		height: 100%;
+	}
+	/*购物车*/
+	
+	.shopping {
+		width: 150px;
+		height: 170px;
+		position: fixed;
+		z-index: 9999;
+		background: whitesmoke;
+		right: -150px;
+		bottom: 150px;
+		opacity: 0.7;
+		cursor: pointer;
+		border-radius: 8px;
+	}
+	
+	.shopping-hd {
+		text-align: center;
+		line-height: 30px;
+		width: 50px;
+		height: 100px;
+		position: relative;
+		top: -110px;
+		left: -50px;
+		border: 1px solid #09C4DC;
+		cursor: pointer;
+		font-size: 26px;
+		border-radius: 4px;
+		color: whitesmoke;
+	}
+	
+	.shopping-hd:hover {
+		border: 3px #09C4DC solid;
+		color: #09C4DC;
+	}
