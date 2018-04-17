@@ -28,8 +28,23 @@
 		left: 10px;
 		bottom: 50px;
 		top: 50px;
-		background-color: #4b4b4b;
-		opacity: 0.8;
+		background-color: #eaecd7;
+		opacity: 0.7;
+		border: 1px solid #d2d2d2;
+	}
+	
+	.right-info {
+		padding-left: 10px;
+		padding-top: 10px;
+		border-radius: 27px;
+		position: absolute;
+		bottom: 50px;
+		right: 10px;
+		left: 230px;
+		top: 50px;
+		background-color: #eaecd7;
+		opacity: 0.7;
+		border: 1px solid #d2d2d2;
 	}
 	
 	.btn-right {
@@ -39,9 +54,11 @@
 		position: absolute;
 		right: 2px;
 		bottom: 2px;
-		background-color: #a9a3a0;
+		background-color: #b1b14d;
 		cursor: pointer;
 		border: 1px #f35618;
+		color: #28311c;
+		outline: none;
 	}
 	
 	.infoDiv-right {
@@ -51,8 +68,9 @@
 		height: 300px;
 		float: left;
 		border-radius: 8px;
-		border: 1px solid;
+		border: 1px solid #d2d2d2;
 		cursor: pointer;
+		color: #28311c;
 	}
 	
 	.img-right {
@@ -60,8 +78,8 @@
 	}
 	
 	.btn-right:hover {
-		background-color: #f35618;
-		color: #cbc8c7;
+		background-color: #28311c;
+		color: #b1b14d;
 		border: 1px #a9a3a0 solid;
 	}
 	
@@ -74,38 +92,50 @@
 		left: 170px;
 		border-radius: 6px;
 		text-align: center;
-		color: #f35618;
+		color: #d68529;
 		font-size: 18px;
 	}
 	
 	.text-right {
-		width: 50px;
+		width: 30px;
 		height: 20px;
-		border-radius: 5px;
 		text-align: center;
 		position: relative;
 		top: 48px;
-		left: 75px;
-		/*margin: 0 auto;*/
+		left: 95px;
+		font-size: 16px;
+		border: 1px solid #dadada;
+		color: #666;
+		outline: none;
 	}
 	
 	.reduce-right {
 		display: block;
 		width: 20px;
-		height: 20px;
+		height: 17px;
 		font-size: 20px;
 		position: relative;
-		top: 68px;
-		left: 52px;
+		top: 70.5px;
+		left: 74px;
+		border: 1px solid #dadada;
+		text-align: center;
+		padding-top: 3px;
+		font-size: 10px;
+		color: #666;
 	}
 	
 	.add-right {
 		display: block;
 		width: 20px;
-		height: 20px;
+		height: 17px;
 		position: relative;
-		top: 25px;
-		left: 133px;
+		top: 26px;
+		left: 126px;
+		font-size: 10px;
+		text-align: center;
+		padding-top: 3px;
+		border: 1px solid #dddddd;
+		color: #666;
 	}
 	
 	.left-nav div {
@@ -117,33 +147,23 @@
 		margin-top: 20px;
 		font-size: 20px;
 		font-family: "微软雅黑";
-		color: #cbc8c7;
+		color: #29421b;
+		font-size: 18px;
 	}
 	
 	.left-nav div:hover {
-		border-left: 10px solid #f35618;
-		color: #f35618;
+		border-left: 10px solid #29421b;
+		color: #141a0c;
 		border-radius: 8px;
-		border-right: 10px solid #f35618;
+		border-right: 10px solid #29421b;
+		font-size: 24px;
 	}
 	
 	.active {
-		border-left: 10px solid #f35618;
-		color: #f35618;
+		border-left: 10px solid #29421b;
+		color: #141a0c;
 		border-radius: 8px;
-		border-right: 10px solid #f35618;
-	}
-	
-	.right-info {
-		padding-left: 10px;
-		padding-top: 10px;
-		border-radius: 27px;
-		position: absolute;
-		bottom: 50px;
-		right: 10px;
-		left: 230px;
-		top: 50px;
-		background-color: #4b4b4b;
+		border-right: 10px solid #29421b;
 		opacity: 0.8;
 	}
 	
