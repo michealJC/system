@@ -75,6 +75,16 @@
 	
 	.img-right {
 		width: 240px;
+		height: 160px;
+	}
+	
+	.about-right{
+		display: block;
+		width: 240px;
+		height: 50px;
+		font-size: 12px;
+		overflow: hidden;		
+		
 	}
 	
 	.btn-right:hover {
@@ -87,8 +97,8 @@
 		display: block;
 		width: 70px;
 		height: 20px;
-		position: relative;
-		top: 55px;
+		position: absolute;
+		bottom: 40px;
 		left: 170px;
 		border-radius: 6px;
 		text-align: center;
@@ -100,8 +110,8 @@
 		width: 30px;
 		height: 20px;
 		text-align: center;
-		position: relative;
-		top: 48px;
+		position: absolute;
+		bottom: 2px;
 		left: 95px;
 		font-size: 16px;
 		border: 1px solid #dadada;
@@ -114,8 +124,8 @@
 		width: 20px;
 		height: 17px;
 		font-size: 20px;
-		position: relative;
-		top: 70.5px;
+		position: absolute;
+		bottom: 2px;
 		left: 74px;
 		border: 1px solid #dadada;
 		text-align: center;
@@ -128,8 +138,8 @@
 		display: block;
 		width: 20px;
 		height: 17px;
-		position: relative;
-		top: 26px;
+		position: absolute;
+		bottom: 2px;
 		left: 126px;
 		font-size: 10px;
 		text-align: center;
