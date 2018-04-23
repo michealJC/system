@@ -19,6 +19,13 @@ public class Foodshop_controller {
     @ResponseBody
     public String foodshopmangger(@RequestBody  List<sys_foodshop> shopdata){
         foodshops=shopdata;
+        for(int i=0;i<foodshops.size();i++){
+            String jiage=foodshops.get(i).getFoodjiage().replace("$","");
+            String shuliang=foodshops.get(i).getFoodshuliang();
+            System.out.print(jiage+shuliang);
+            foodshops.get(i).setFoodjiage((Integer.valueOf(shuliang)*Integer.valueOf(jiage))+"");
+        }
+
         return "1";
     }
 
