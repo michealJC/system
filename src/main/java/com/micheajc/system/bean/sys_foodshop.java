@@ -2,19 +2,18 @@ package com.micheajc.system.bean;
 
 public class sys_foodshop {
 
-    private String image;
+    private String foodimage;
     private String foodname;
     private String foodjiage;
     private String foodshuliang;
 
 
-
-    public String getImage() {
-        return image;
+    public String getFoodimage() {
+        return foodimage;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setFoodimage(String foodimage) {
+        this.foodimage = foodimage;
     }
 
     public String getFoodname() {
@@ -41,9 +40,9 @@ public class sys_foodshop {
         this.foodshuliang = foodshuliang;
     }
 
-    public sys_foodshop(String image, String foodname, String foodjiage, String foodshuliang) {
+    public sys_foodshop(String foodimage, String foodname, String foodjiage, String foodshuliang) {
 
-        this.image = image;
+        this.foodimage = foodimage;
         this.foodname = foodname;
         this.foodjiage = foodjiage;
         this.foodshuliang = foodshuliang;
