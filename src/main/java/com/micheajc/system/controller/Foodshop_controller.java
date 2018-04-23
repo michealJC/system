@@ -22,6 +22,8 @@ public class Foodshop_controller {
         return "1";
     }
 
+
+
     @RequestMapping("/foodshopmangger2")
     public ModelAndView foodshopmangger2(){
         ModelAndView modelAndView=new ModelAndView();
