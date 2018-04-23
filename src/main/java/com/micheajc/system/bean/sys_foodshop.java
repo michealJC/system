@@ -7,6 +7,8 @@ public class sys_foodshop {
     private String foodjiage;
     private String foodshuliang;
 
+
+
     public String getImage() {
         return image;
     }
