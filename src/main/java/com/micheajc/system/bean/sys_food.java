@@ -1,5 +1,7 @@
 package com.micheajc.system.bean;
 
+import com.sun.beans.decoder.ValueObject;
+
 public class sys_food {
     private int id;
     private String food_name;

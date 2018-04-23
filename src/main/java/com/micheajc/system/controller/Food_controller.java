@@ -3,6 +3,8 @@ package com.micheajc.system.controller;
 
 import com.micheajc.system.bean.sys_food;
 import com.micheajc.system.service.Food_service;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,7 +33,7 @@ public class Food_controller {
     @RequestMapping("/wherefoodclassgetlist")
     @ResponseBody
     public List<sys_food> foodclassgetlist(@RequestBody String json){
-        System.out.print(json);
+
         return food_service.wherefoodclassgetlist(json);
     }
 }
