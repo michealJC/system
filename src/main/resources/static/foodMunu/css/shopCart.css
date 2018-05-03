@@ -3,24 +3,24 @@
 	padding: 0;
 	list-style: none;
 }
-
 body {
-	background: url(../images/t.jpg) no-repeat;
+	background: url(../images/t.jpg) no-repeat 0 0;
 	background-size: cover;
 	-moz-user-select: none;
 	-khtml-user-select: none;
 	user-select: none;
+	height: 100vh !important;
 }
 
 .shopBox {
 	position: absolute;
-	top: 100px;
-	right: 100px;
-	bottom: 100px;
-	left: 100px;
-	background-color: #4b4b4b;
+	top: 10px;
+	right: 10px;
+	bottom: 10px;
+	left: 10px;
+	background-color: #eaecd7;
 	border-radius: 27px;
-	opacity: 0.8;
+	/*opacity: 0.8;*/
 	/*padding: 60px;*/
 }
 
@@ -28,20 +28,10 @@ body {
 	position: relative;
 	width: 100%;
 	height: 100%;
-	border: 1px #333532 solid;
+	/*border: 1px #333532 solid;*/
 	border-radius: 27px;
 	overflow-y: auto;
 	overflow-x: hidden;
-}
-
-.shopPay {
-	position: relative;
-	margin-top: 7%;
-	left: 60%;
-	width: 40%;
-	height: 120px;
-	/*border: 1px solid #c2c4c1;*/
-	border-radius: 8px;
 }
 
 .form {
@@ -57,37 +47,43 @@ body {
 .form .table th {
 	width: 60%;
 	height: 50px;
-	border-left: 1px solid #080808;
-	border-top: 1px solid #080808;
-	border-right: 1px solid #080808;
-	border-bottom: 1px solid #080808;
+	border-left: 1px solid #adbaa2;
+	border-top: 1px solid #adbaa2;
+	border-right: 1px solid #adbaa2;
+	border-bottom: 1px solid #adbaa2;
 	border-radius: 8px;
+	color: #28311c;
+	/*background-color: #c8f1dc;*/
 }
 
 .form .table td {
 	width: 40%;
-	border-left: 1px solid #080808;
-	border-bottom: 1px solid #080808;
-	border-right: 1px solid #080808;
+	border-left: 1px solid #adbaa2;
+	border-bottom: 1px solid #adbaa2;
+	border-right: 1px solid #adbaa2;
 	border-radius: 8px;
 	height: 120px;
+	color: #28311c;
+	position: relative;
 }
 
-.form .table td span {
-	position: relative;
+.form .table .form-span {
+	position: absolute;
 	width: 100px;
 	height: 50px;
 	float: left;
 	display: block;
 	font-size: 24px;
-	left: 35%;
-	top: 22%;
+	right: 18%;
+	top: 35%;
+	color: #28311c;
 }
 
 .form .table td img {
-	position: relative;
+	position: absolute;
 	float: left;
 	display: block;
+	top: 10%;
 	left: 16%;
 	height: 100px;
 }
@@ -95,58 +91,89 @@ body {
 .form .table td h3 {
 	text-align: center;
 	display: block;
-	position: relative;
 	float: left;
 	width: 100px;
 	height: 25px;
-	left: 20%;
-	top: 10%;
-	border-bottom: 2px solid #000000;
+	border-bottom: 2px solid #5f6160;
+	color: #d68529;
+	margin-right: 40px;
+}
+
+.form-w {
+	/*height: 30px;*/
+	position: absolute;	
+	/*border: 1px solid #00C5B5;*/
+	left:33%;
 }
 
 .form .table td input {
-	width: 50px;
-	height: 20px;
-	font-size: 18px;
+	display: block;
+	width: 65px;
+	height: 25px;
 	text-align: center;
-	border-radius: 5px;
-	position: relative;
-	left: 30%;
-	top: 10%;
+	border: 1px solid #dadada;
+	font-size: 20px;
+	/*position: relative;*/
+	float: left;
+	
 }
 
-.form .table td a {
-	text-decoration: none;
-	color: #000000;
-	font-size: 18px;
-}
-
-.form .table a.form-A1 {
+.shopPay {
 	position: relative;
-	left: 29%;
-	top: 10%;
-}
-
-.form .table a.form-A2 {
-	position: relative;
-	left: 31%;
-	top: 10%;
+	margin-top: 7%;
+	left: 50%;
+	width: 50%;
+	height: 120px;
+	/*border: 1px solid #c2c4c1;*/
+	border-radius: 8px;
 }
 
 .shopMoney {
 	position: relative;
 	top: 15%;
-	width: 40%;
+	width: 35%;
 	height: 70%;
 	float: left;
+}
+.shopMoney h4 {
+	width: 80px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	position: relative;
+	top: 88%;
+	left: 3%;
 }
 
 .shopTo {
 	position: relative;
 	top: 15%;
-	width: 30%;
+	width: 35%;
 	height: 70%;
 	float: left;
+}
+.shopTo h4 {
+	width: 80px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	position: relative;
+	top: 88%;
+}
+
+
+.shopPay span {
+	position: relative;
+	left: 5%;
+	top: 40%;
+	display: block;
+	border-bottom: 3px #5f6160 solid;
+	height: 50%;
+	width: 90%;
+	text-align: center;
+	line-height: 55px;
+	font-size: 18px;
+	color: #d68529;
 }
 
 .settlement {
@@ -155,25 +182,15 @@ body {
 	float: left;
 }
 
-.shopPay span {
-	position: relative;
-	left: 20%;
-	top: 40%;
+.settlement .settlement-btn {
 	display: block;
-	border-bottom: 3px #000000 solid;
-	height: 50%;
-	width: 70%;
-	text-align: center;
-	line-height: 55px;
-	font-size: 18px;
-}
-
-.settlement input {
 	width: 75%;
-	height: 75%;
+	height: 73px;
 	position: relative;
-	top: 15%;
+	top: 45%;
 	left: 15%;
+	line-height: 73px;
+	text-align: center;
 	border-radius: 17px;
 	font-size: 18px;
 	background-color: #463614;
@@ -183,7 +200,147 @@ body {
 	outline: none;
 }
 
-.settlement input:hover {
-	background: #aaada9;
+.settlement .settlement-btn:hover {
+	background: red;
 	color: yellow;
+}
+
+.modal {
+	width: 900px;
+	height: 500px;
+	/*border: 1px solid #080808;*/
+	position: absolute;
+	top: 15%;
+	left: 25%;
+	z-index: 1000;
+	display: none;
+	opacity: 1 !important;
+	background: #FFFFFF;
+}
+
+
+.mask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #000000;
+	z-index: 998;
+	/*opacity: 0.8;*/
+	display: none;
+}
+
+.modal-left {
+	width: 57.5%;
+	height: 99.5%;
+	float: left;
+	margin-right: 2%;
+	border: 1px solid #eee;
+	position: relative;
+}
+
+.modal-right {
+	width: 40%;
+	height: 99.5%;
+	float: left;
+	border: 1px solid #eee;
+}
+
+.modal-left div {
+	width: 100%;
+	height: 19.8%;
+	position: relative;
+	/*border-bottom: 1px solid #eee;*/
+}
+
+.modal-header h2 {
+	font-size: 16px;
+	float: left;
+	margin-top: 6%;
+	margin-left: 3%;
+}
+
+.modal-pay h2 {
+	position: absolute;
+	right: 8%;
+	bottom: 20%;
+	color: #f74342;
+}
+
+.modal-pay h5 {
+	position: absolute;
+	right: 11%;
+	bottom: 3%;
+	color: #5e5e5e;
+}
+
+.modal-pres {
+	width: 100%;
+	height: 30%;
+	text-align: center;
+	margin: 0 auto;
+	position: relative;
+}
+
+.modal a.modal-A1 {
+	display: block;
+	width: 27px;
+	height: 25px;
+	border-top: 1px solid #dadada;
+	border-left: 1px solid #dadada;
+	border-bottom: 1px solid #dadada;
+	/*position: relative;*/
+	float: left;
+	text-decoration: none;
+	color: black;
+	text-align: center;
+	line-height: 25px;
+}
+
+.modal a.modal-A2 {
+	display: block;
+	width: 27px;
+	height: 25px;
+	border-top: 1px solid #dadada;
+	border-right: 1px solid #dadada;
+	border-bottom: 1px solid #dadada;
+	/*position: relative;*/
+	float: left;
+	text-decoration: none;
+	color: black;
+	text-align: center;
+	line-height: 25px;
+}
+
+.modal-info input {
+	width: 45px;
+	height: 25px;
+	text-align: center;
+	border: 1px solid #dadada;
+	font-size: 20px;
+	float: left;
+}
+
+.modal-info h5 {
+	float: left;
+	font-size: 16px;
+}
+.modal-finish {
+	width: 100px;
+	height: 50px;
+	top: 39%;
+	left: 62%;
+	border-radius: 2px;
+	background: #463614;
+	position: relative;
+	cursor: pointer;
+	line-height: 50px;
+	text-align: center;
+	font-size: 18px;
+	color: #CCCCCC;
+}
+
+.modal-finish:hover {
+	background: orangered;
 }

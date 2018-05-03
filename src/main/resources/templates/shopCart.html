@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta charset="UTF-8">
+		<!--<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=	1">-->
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/foodMunu/css/shopCart.css" />
+		<script th:src="@{/foodMunu/js/JQuery.js}" type="text/javascript" charset="utf-8"></script>
+		<script th:src="@{/foodMunu/js/shopCart.js}" charset="utf-8"></script>
+		<script th:inline="javascript">
+			//上一个页面点击添加的所有数据
+			//其中有foodimage，foodname，foodshuliang，foodjiage
+			var fooddata=[[${shopdata}]];
+			var jsonfooddata=eval(fooddata);
+		</script>
+	</head>
+
+	<body>
+		<div class="shopBox">
+			<div class="shopForm">
+				<form class="form" action="" method="post">
+					<table class="table" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<th>名称</th>
+							<th>价格</th>
+
+						</tr>
+
+					</table>
+					<div class="shopPay">
+						<div class="shopMoney">
+							<h4>总金额：</h4><span id="payMenta">$9999</span>
+						</div>
+						<div class="shopTo">
+							<h4>实付：</h4><span id="payMentb">$9999</span>
+						</div>
+						<div class="settlement">
+							<div class="settlement-btn">Pay For</div>
+						</div>
+
+					</div>
+				</form>
+
+			</div>
+
+		</div>
+		<div class="modal">
+			<div class="modal-left">
+				<div class="modal-header">
+					<h2>订单详情</h2>
+					<!--<a href="javascript:;">dwdaw</a>-->
+				</div>
+				<div class="modal-name">桌&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号:</div>
+				<div class="modal-info">
+					<h5>用餐人数：</h5>
+					<a class="modal-A1" href="javascript:;"> 一 </a>
+					<input type="text" value="1" id="modal-person" onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');" />
+					<a class="modal-A2" href="javascript:;"> 十</a>
+				</div>
+				<div class="modal-time">预计到达时间：</div>
+				<div class="modal-pay">
+					<h2 id="reals-pay">$999</h2>
+					<h5 id="real-num">共0份</h5>
+				</div>
+			</div>
+			<div class="modal-right">
+				<img src="/foodMunu/images/erWeiMa.jpg" />
+				<div class="modal-pres">
+					请扫描上方二维码完成付款
+					<div class="modal-finish">完 成</div>
+				</div>
+			</div>
+		</div>
+		<div class="mask"></div>
+	</body>
+
+</html>

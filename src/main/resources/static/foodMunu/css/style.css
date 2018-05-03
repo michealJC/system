@@ -1584,7 +1584,7 @@ h3.tittle.two {
 .w3ls-special-img {
 	padding: 0;
 	background: #000 url(../images/sp1.jpg) no-repeat 0px 0px;
-	min-height: 235px;
+	height: 235px;
 	background-size: cover;
 	text-align: center;
 	position: relative;

@@ -1,0 +1,24 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+body {
+	background: url(../images/t.jpg) no-repeat;
+	background-size: cover;
+}
+
+.container {
+	margin-top: 50px;
+	border: 1px solid red;
+	min-height: 800px;
+}
+
+.left-nav {
+	border: 1px solid red;
+}
+
+.right-box {
+	border: 1px solid red;
+}

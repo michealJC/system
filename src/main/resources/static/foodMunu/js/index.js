@@ -82,15 +82,64 @@ $(function() {
 
     //团购优惠
     //第一个模块
-
+    $.ajax({
+        type:"POST",
+        url:"",
+        datatype:"json",
+        // error:function () {
+        //     alert("传值错误11");
+        // },
+        success:function (data) {
+            var JsonData = eval(data);
+            $("#bulk-imga").css("background","url("+JsonData[0]+")");
+            $("#bulk-namea").text(JsonData[0]);
+            $("#bulk-abouta").text(JsonData[0]);
+        }
+    })
 
     //第二个模块
-
+    $.ajax({
+        type:"POST",
+        url:"",
+        datatype:"json",
+        // error:function () {
+        //     alert("传值错误22");
+        // },
+        success:function (data) {
+            var JsonData = eval(data);
+            $("#bulk-imgb").css("background","url("+JsonData[1]+")");
+            $("#bulk-nameb").text(JsonData[1]);
+            $("#bulk-aboutb").text(JsonData[1]);
+        }
+    })
 
     //第三个模块
-
+    $.ajax({
+        type:"POST",
+        url:"",
+        datatype:"json",
+        // error:function () {
+        //     alert("传值错误33");
+        // },
+        success:function (data) {
+            var JsonData = eval(data);
+            $("#bulk-imgc").css("background","url("+JsonData[0]+")");
+            $("#bulk-namec").text(JsonData[2]);
+            $("#bulk-aboutc").text(JsonData[2]);
+        }
+    })
 
     //第四个模块
-
+    $.ajax({
+        type:"POST",
+        url:"",
+        datatype:"json",
+        success:function (data) {
+            var JsonData = eval(data);
+            $("#bulk-imgd").css("background","url("+mian-one.cssJsonData[3]+")");
+            $("#bulk-named").text(JsonData[3]);
+            $("#bulk-aboutd").text(JsonData[3]);
+        }
+    })
 
 })
