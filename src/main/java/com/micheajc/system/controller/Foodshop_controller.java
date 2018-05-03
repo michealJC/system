@@ -56,7 +56,7 @@ public class Foodshop_controller {
         //判断传来的参数中座号是否被占用
         JSONArray jsonArray=new JSONArray(jsondata);
         JSONObject foodzuohao=jsonArray.getJSONObject(0);
-        int id=Integer.parseInt(foodzuohao.getString("foodzuohao"));
+        int id=foodzuohao.getInt("foodzuohao");
         int foodtablezhuangtai=foodcarryshop_service.gettablezhuangtaibyid(id);
         if(foodtablezhuangtai==1){
             //如果桌号为空就为他插入
@@ -65,7 +65,7 @@ public class Foodshop_controller {
             JSONArray jsonArray1=jsonfood.getJSONArray("food");
             for (int i=0;i<jsonArray1.length();i++){
                 JSONObject food1=jsonArray1.getJSONObject(i);
-                foodcarryshops.add(new sys_foodcarryshop(food1.getString("foodname"),food1.getString("foodjiage"),food1.getString("foodshuliang"),food1.getString("foodzuohao")));
+                foodcarryshops.add(new sys_foodcarryshop(food1.getString("foodname"),food1.getString("foodjiage"),food1.getString("foodshuliang"),String.valueOf(food1.getInt("foodzuohao"))));
             }
             int ll=foodcarryshop_service.insertfoodcarryshop(foodcarryshops);
             if(ll==1){
