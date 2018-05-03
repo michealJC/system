@@ -49,6 +49,10 @@ $(function () {
             i = 1;
         }
     })
+
+
+
+
     //点击付款
     $(".modal-finish").click(function () {
 
