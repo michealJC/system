@@ -1,5 +1,6 @@
 package com.micheajc.system.controller;
 
+import com.micheajc.system.bean.SysCarryFood;
 import com.micheajc.system.bean.SysMenuTable;
 import com.micheajc.system.service.Menuservice;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,5 +31,11 @@ public class MenuController {
     @ResponseBody
     public List<SysMenuTable> getMenuTable(){
         return menuservice.getMenutable();
+    }
+    //得到所有相同菜品的菜名和份数
+    @RequestMapping(value = "/getcarryfood",method = RequestMethod.POST)
+    @ResponseBody
+    public List<SysCarryFood> getcarryfood(){
+        return menuservice.getcarryfood();
     }
 }
