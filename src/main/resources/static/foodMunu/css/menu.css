@@ -101,6 +101,8 @@ body {
 	height: 66%;
 	background: #ffffff;
 	border-bottom: solid #d1d1d1 0.1em;
+	color: #afafaf;
+	overflow: auto;
 }
 
 .table .table-food .infor-food {
@@ -140,6 +142,7 @@ body {
 	border-bottom: solid #d1d1d1 1px;
 	color: #afafaf;
 	background: #ffffff;
+	position:relative;
 }
 
 .table .table-money h3 {
@@ -157,6 +160,12 @@ body {
 .table .table-money h2 {
 	float: right;
 	margin-right: 3px;
+}
+
+.table .table-money a {
+	position: absolute;
+	left: 2px;
+	bottom: 5px;
 }
 
 .table .table-finish {
