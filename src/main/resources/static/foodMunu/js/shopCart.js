@@ -50,12 +50,39 @@ $(function () {
         }
     })
 
-
-
-
     //点击付款
     $(".modal-finish").click(function () {
-
+            //得到桌号
+            var zhuohao=2;
+            //得到食物
+            jsonfooddata
+            var foodarray=[];
+            for (var i=0;i<jsonfooddata.length;i++){
+                //得到i个食物名称
+                //得到i个事物价格
+                //得到i个食物的份数
+                //得到桌号
+                foodarray.push(new myfooddata(jsonfooddata[i].foodname,jsonfooddata[i].foodjiage,jsonfooddata[i].foodshuliang,zhuohao));
+            }
+            //得到用餐人数
+            var person = $("#modal-person").val();
+            //得到总金额
+            var monery = allPrice;
+            // alert(foodarray+"=="+person+"=="+monery);
+            $.ajax({
+                url:"/foodshop/foodcarryshop",
+                type:"POST",
+                data:JSON.stringify([{"foodzuohao":zhuohao},{"food":foodarray},{"renshu":person},{"addjine":monery}]),
+                contentType:"application/json",
+                datatype:"json",
+                success:function (data) {
+                    if (data==1){
+                        alert("订餐成功");
+                    }else {
+                        alert("失败");
+                    }
+                }
+            })
     })
 })
 
