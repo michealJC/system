@@ -1,0 +1,159 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+body {
+	background: #f7f7f7;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;
+}
+
+.box {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	right: 20px;
+	bottom: 20px;
+	border: 1px solid #000000;
+}
+
+.nav-left {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 2px;
+	right: 80%;
+	border: 1px solid #00C5B5;
+}
+
+.nav-left .dish {
+	position: relative;
+	padding: 5px;
+	width: 92%;
+	height: 70px;
+	margin: auto;
+	margin-top: 10px;
+	border-bottom: #101010 dashed 1px;
+	font-size: 20px;
+}
+
+.nav-left .dish span.dish-name {
+	float: left;
+	line-height: 100px;
+}
+
+.nav-left .dish span.dish-menu {
+	float: right;
+	line-height: 100px;
+}
+
+.info {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 20.5%;
+	right: 2px;
+	border: 1px solid #398439;
+	overflow: auto;
+}
+
+.info .table {
+	position: relative;
+	width: 23%;
+	height: 49%;
+	border: 1px solid #cacbcf;
+	float: left;
+	margin-left: 18px;
+	margin-top: 4px;
+	border-radius: 5px;
+}
+
+.table .table-num {
+	width: 100%;
+	height: 15%;
+	border-bottom: solid #d1d1d1 1px;
+	color: #afafaf;
+	background: #ffffff;
+}
+
+.table-num h1 {
+	float: left;
+	font-size: 46px;
+}
+
+.table-num span {
+	float: left;
+	line-height: 73px;
+	margin-left: 10px;
+}
+
+.table .table-food {
+	width: 100%;
+	height: 67%;
+	background: #ffffff;
+}
+
+.table .table-food .infor-food {
+	width: 100%;
+	height: 40px;
+	/*background: red;*/
+	border-bottom: solid #d1d1d1 0.2em;
+	line-height: 40px;
+}
+
+.table .table-food h4 {
+	float: left;
+	margin-left: 3px;
+	margin-right: 150px;
+}
+
+.table .table-food span {
+	float: left;
+	margin-left: 50px;
+}
+
+.table .table-money {
+	width: 100%;
+	height: 18%;
+	border-bottom: solid #d1d1d1 1px;
+	color: #afafaf;
+	background: #ffffff;
+}
+
+.table .table-money h3 {
+	float: left;
+	margin-top: 3px;
+	margin-left: 3px;
+}
+
+.table .table-money span {
+	float: right;
+	line-height: 33px;
+	margin-right: 5px;
+}
+
+.table .table-money h2 {
+	float: right;
+	margin-right: 3px;
+}
+
+.table .table-finish {
+	width: 60px;
+	height: 30px;
+	position: absolute;
+	background: #e7ac7a;
+	bottom: 5px;
+	right: 5px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 5px;
+	cursor: pointer;
+	color: #080808 !important;
+}
+
+.table .table-finish:hover {
+	background: #f90e3a;
+}
