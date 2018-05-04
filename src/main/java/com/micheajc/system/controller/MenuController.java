@@ -55,14 +55,17 @@ public class MenuController {
     @RequestMapping(value = "updateTable",method = RequestMethod.POST)
     @ResponseBody
     public String delectTable(@RequestBody String data){
-            JSONObject jsonObject=new JSONObject(data);
-            String id=jsonObject.getString("id");
-            //清空之前把订单转到历史订单中
+            try {
+                JSONObject jsonObject=new JSONObject(data);
+                String id=jsonObject.getString("id");
+                //清空之前把订单转到历史订单中
 
-            menuservice.updatetable(id);
-            //根据菜品清空
-            menuservice.delectfoodByzuohao(id);
-
-            return "1";
+                menuservice.updatetable(id);
+                //根据菜品清空
+                menuservice.delectfoodByzuohao(id);
+                return "1";
+            }catch (Exception e){
+                return "0";
+            }
     }
 }
