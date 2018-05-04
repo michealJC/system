@@ -32,4 +32,14 @@ public class Menuservice {
     public List<sys_foodcarryshop> getcarryfoodByzuohao(String foodzuohao){
        return menumapper.getcarryfoodByzuohao(foodzuohao);
     }
+
+    //清空桌子信息
+    public void updatetable(String id){
+        menumapper.updetetable(id);
+    }
+
+    //清空关于桌号的所有菜
+    public void delectfoodByzuohao(String id){
+        menumapper.delectfoodByzuohao(id);
+    }
 }

@@ -4,9 +4,7 @@ package com.micheajc.system.mapper;
 import com.micheajc.system.bean.SysCarryFood;
 import com.micheajc.system.bean.SysMenuTable;
 import com.micheajc.system.bean.sys_foodcarryshop;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -29,4 +27,13 @@ public interface Menumapper {
     //根据桌号得到所有的菜品
     @Select("SELECT foodname,foodjiage,foodshuliang,foodzuohao  FROM sys_foodcarryshop WHERE foodzuohao=#{foodzuohao}")
     public List<sys_foodcarryshop> getcarryfoodByzuohao(@Param("foodzuohao") String foodzuohao);
+
+    //清空桌子信息
+    @Update("UPDATE sys_tablenumber SET zhuangtai=1,renshu=0,addjine=0,DATA='0' WHERE id=#{id}")
+    public void updetetable(@Param("id")String id);
+    //根据桌号清空菜品
+    @Delete("DELETE FROM sys_foodcarryshop WHERE foodzuohao=#{foodzuohao}")
+    public void delectfoodByzuohao(@Param("foodzuohao") String foodzuohao);
+
+    //清空之前把桌子的历史信息保存到历史记录表中
 }
