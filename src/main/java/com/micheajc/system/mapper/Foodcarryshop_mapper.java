@@ -18,6 +18,6 @@ public interface Foodcarryshop_mapper {
     public void updatezhuangtai(@Param("zhuangtai") int zhuangtai,@Param("id") int id);
 
     //改变桌号中的信息
-    @Update("UPDATE sys_Tablenumber SET renshu=#{renshu},addjine=#{addjine},zhuangtai = #{zhuangtai} WHERE id = #{id};")
-    public void updatetablenumber(@Param("zhuangtai") int zhuangtai,@Param("renshu") int renshu,@Param("addjine") int addjine,@Param("id") int id);
+    @Update("UPDATE sys_Tablenumber SET renshu=#{renshu},addjine=#{addjine},zhuangtai = #{zhuangtai},data=#{data} WHERE id = #{id};")
+    public void updatetablenumber(@Param("zhuangtai") int zhuangtai,@Param("renshu") int renshu,@Param("addjine") int addjine ,@Param("id") int id,@Param("data") String data);
 }

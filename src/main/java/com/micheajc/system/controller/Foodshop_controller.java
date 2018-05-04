@@ -14,7 +14,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -70,7 +72,9 @@ public class Foodshop_controller {
             int ll=foodcarryshop_service.insertfoodcarryshop(foodcarryshops);
             if(ll==1){
                 //添加成功后把桌子的状态设为0,和把人数，金额输入进去
-                foodcarryshop_service.updatetablenumber(0,jsonArray.getJSONObject(2).getInt("renshu"),jsonArray.getJSONObject(3).getInt("addjine"),id);
+                Date date=new Date();
+                SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                foodcarryshop_service.updatetablenumber(0,jsonArray.getJSONObject(2).getInt("renshu"),jsonArray.getJSONObject(3).getInt("addjine"),id,simpleDateFormat.format(date).toString());
                 return "1";
             }
         }else {

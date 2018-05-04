@@ -21,7 +21,7 @@ public class ShiroSpring {
         Map<String,String> filterChainDefinitionMap =new LinkedHashMap<String, String>();
         filterChainDefinitionMap.put("/login","anon");
         filterChainDefinitionMap.put("/loginsub","anon");
-        filterChainDefinitionMap.put("/tttt","authc");
+        filterChainDefinitionMap.put("/demo1","authc");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
         shiroFilterFactoryBean.setLoginUrl("/login");
 

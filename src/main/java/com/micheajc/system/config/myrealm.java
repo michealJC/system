@@ -22,7 +22,6 @@ public class myrealm extends AuthorizingRealm {
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
         String username=authenticationToken.getPrincipal().toString();
-        System.out.println(username+"ddddddddddddddddddddd");
         String password=loginmapper.getpasswordbyusername(username);
         SimpleAuthenticationInfo simpleAuthenticationInfo=new SimpleAuthenticationInfo(username,password,"myrrealm");
 

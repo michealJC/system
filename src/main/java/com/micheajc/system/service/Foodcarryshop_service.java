@@ -31,7 +31,7 @@ public class Foodcarryshop_service {
     }
 
 
-    public void updatetablenumber(int zhuangtai,int renshu,int addjine,int id){
-        foodcarryshop_mapper.updatetablenumber(zhuangtai,renshu, addjine, id);
+    public void updatetablenumber(int zhuangtai,int renshu,int addjine,int id,String data){
+        foodcarryshop_mapper.updatetablenumber(zhuangtai,renshu, addjine, id,data);
     }
 }

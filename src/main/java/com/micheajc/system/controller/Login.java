@@ -19,10 +19,13 @@ public class Login {
 
     @RequestMapping(value = "/loginsub")
     public String loginsub(loginuser login){
-        System.out.println(login.toString()+"----------------"+login.getUsername()+login.getPassword());
-        Subject subject= SecurityUtils.getSubject();
-        UsernamePasswordToken usernamePasswordToken=new UsernamePasswordToken(login.getUsername(),login.getPassword());
-        subject.login(usernamePasswordToken);
-        return "demo1";
+        try {
+            Subject subject= SecurityUtils.getSubject();
+            UsernamePasswordToken usernamePasswordToken=new UsernamePasswordToken(login.getUsername(),login.getPassword());
+            subject.login(usernamePasswordToken);
+            return "menu";
+        }catch (Exception e){
+            return "backstage";
+        }
     }
 }
