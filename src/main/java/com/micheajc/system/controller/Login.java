@@ -10,6 +10,6 @@ public class Login {
 
     @RequestMapping(value = "/login")
     public String login(){
-        return "demo1";
+        return "backstage";
     }
 }
