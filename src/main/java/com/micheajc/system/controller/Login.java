@@ -8,6 +8,7 @@ import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class Login {
@@ -23,9 +24,9 @@ public class Login {
             Subject subject= SecurityUtils.getSubject();
             UsernamePasswordToken usernamePasswordToken=new UsernamePasswordToken(login.getUsername(),login.getPassword());
             subject.login(usernamePasswordToken);
-            return "menu";
+            return "redirect:/foodMunu/menu.html";
         }catch (Exception e){
-            return "backstage";
+            return "redirect:backstage.html";
         }
     }
 }
