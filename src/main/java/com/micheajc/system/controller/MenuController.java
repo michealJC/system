@@ -2,9 +2,12 @@ package com.micheajc.system.controller;
 
 import com.micheajc.system.bean.SysCarryFood;
 import com.micheajc.system.bean.SysMenuTable;
+import com.micheajc.system.bean.sys_foodcarryshop;
 import com.micheajc.system.service.Menuservice;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -37,5 +40,13 @@ public class MenuController {
     @ResponseBody
     public List<SysCarryFood> getcarryfood(){
         return menuservice.getcarryfood();
+    }
+
+    //根据桌号得到所有的菜品
+    @RequestMapping(value = "/getcarryfoodByzuohao",method = RequestMethod.POST)
+    @ResponseBody
+    public List<sys_foodcarryshop> getcarryfoodByzuohao(@RequestBody String foodzhuohao){
+        JSONObject jsonObject=new JSONObject(foodzhuohao);
+        return menuservice.getcarryfoodByzuohao(jsonObject.getString("foodzuohao"));
     }
 }

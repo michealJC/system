@@ -26,7 +26,7 @@ public class Login {
             subject.login(usernamePasswordToken);
             return "redirect:/foodMunu/menu.html";
         }catch (Exception e){
-            return "redirect:backstage.html";
+            return "backstage";
         }
     }
 }
