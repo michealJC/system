@@ -54,16 +54,17 @@ body {
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	left: 20.5%;
+	left: 21.5%;
 	right: 2px;
 	border: 1px solid #398439;
 	overflow: auto;
+	padding: 10px;
 }
 
 .info .table {
 	position: relative;
-	width: 23%;
-	height: 49%;
+	width: 330px;
+	height: 450px;
 	border: 1px solid #cacbcf;
 	float: left;
 	margin-left: 18px;
@@ -74,17 +75,22 @@ body {
 .table .table-num {
 	width: 100%;
 	height: 15%;
-	border-bottom: solid #d1d1d1 1px;
+	border-bottom: solid #d1d1d1 0.1em;
 	color: #afafaf;
 	background: #ffffff;
+	position: relative;
 }
 
 .table-num h1 {
 	float: left;
 	font-size: 46px;
+	position: absolute;
+	left: 1px;
 }
 
 .table-num span {
+	position: absolute;
+	right: 2px;
 	float: left;
 	line-height: 73px;
 	margin-left: 10px;
@@ -92,28 +98,41 @@ body {
 
 .table .table-food {
 	width: 100%;
-	height: 67%;
+	height: 66%;
 	background: #ffffff;
+	border-bottom: solid #d1d1d1 0.1em;
 }
 
 .table .table-food .infor-food {
 	width: 100%;
 	height: 40px;
-	/*background: red;*/
 	border-bottom: solid #d1d1d1 0.2em;
 	line-height: 40px;
+	position: relative;
 }
 
-.table .table-food h4 {
+.table .table-food .infor-food h4 {
+	position: absolute;
+	left: 2px;
 	float: left;
-	margin-left: 3px;
-	margin-right: 150px;
+	line-height: 50px;
+	
 }
 
-.table .table-food span {
+.table .table-food .infor-food .infor-fen {
 	float: left;
-	margin-left: 50px;
+	position: absolute;
+	right: 100px;
+	line-height: 50px;
 }
+
+.table .table-food .infor-food .infor-qian {
+	float: right;
+	position: absolute;
+	right: 10px;
+	line-height: 50px;
+}
+
 
 .table .table-money {
 	width: 100%;
