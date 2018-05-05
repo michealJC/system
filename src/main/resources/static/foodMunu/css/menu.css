@@ -27,27 +27,33 @@ body {
 	left: 2px;
 	right: 80%;
 	border: 1px solid #00C5B5;
+	color: #afafaf;
+	overflow: auto;
 }
 
 .nav-left .dish {
 	position: relative;
 	padding: 5px;
 	width: 92%;
-	height: 70px;
+	height: 50px;
 	margin: auto;
 	margin-top: 10px;
-	border-bottom: #101010 dashed 1px;
+	border-bottom: dashed #d1d1d1 0.1em;
 	font-size: 20px;
 }
 
-.nav-left .dish span.dish-name {
+.nav-left .dish .dish-name {
 	float: left;
-	line-height: 100px;
+	line-height: 60px;
+	position: absolute;
+	left: 5px;
 }
 
-.nav-left .dish span.dish-menu {
+.nav-left .dish .dish-menu {
 	float: right;
-	line-height: 100px;
+	line-height: 60px;
+	position: absolute;
+	right: 5px;
 }
 
 .info {

@@ -19,6 +19,8 @@ $(function () {
         //总金额
         var money = $("#payMentb").text();
         $("#reals-pay").text(money);
+        var zuohao = $.cookie('foodzuohao');
+        $(".moda-zuohao").text(zuohao);
         //份数
         var num = new Array();
         var all = 0;
@@ -53,7 +55,7 @@ $(function () {
     //点击付款
     $(".modal-finish").click(function () {
             //得到桌号
-            var zhuohao=2;
+            var zhuohao=$.cookie('foodzuohao');
             //得到食物
             jsonfooddata
             var foodarray=[];

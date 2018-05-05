@@ -1,4 +1,25 @@
 $(function() {
+    //得到地址上的值
+    (function($){
+        $.getUrlParam
+            = function(name)
+        {
+            var reg
+                = new RegExp("(^|&)"+
+                name +"=([^&]*)(&|$)");
+            var r
+                = window.location.search.substr(1).match(reg);
+            if (r!=null) return unescape(r[2]); return null;
+        }
+    })(jQuery);
+    var mydata=$.getUrlParam('foodzuohao');
+
+    $.cookie("foodzuohao",mydata,{path:"/"});
+
+
+
+
+
     //今日推荐
     //第一个模块
     $.ajax({
@@ -141,5 +162,7 @@ $(function() {
             $("#bulk-aboutd").text(JsonData[3]);
         }
     })
+
+
 
 })
