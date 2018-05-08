@@ -1,5 +1,29 @@
-$(function () {
-    //点菜分类
+$(function() {
+    //购物车
+    $(function() {
+
+        $("#js-shopping-hd").click(function() {
+            $("#js-shopping").animate({
+                right: 0
+            }, {
+                durtion: 500,
+                easing: "swing"
+            })
+            return false;
+        });
+        $("#js-shopping").mouseleave(function() {
+            $("#js-shopping").animate({
+                right: -90
+            }, 500)
+            return false;
+        });
+        $("#bubbly-button").click(function() {
+            window.setTimeout(clickLocation, 300);
+        });
+
+    });
+
+    //左侧导航
     $.ajax({
         type:"POST",
         url:"/foodclass/getfoodclass",
@@ -8,28 +32,34 @@ $(function () {
         },
         success:function (data) {
             var JsonData = eval(data);
+
             for(var i = 0 ; i<JsonData.length;i++) {
-                $("#left-nav").append('<div>' + JsonData[i].foodclass_name + '</div>');
+                //添加左侧导航
+                var re=Math.floor(Math.random()*9+1);
+                $("#info").append('<div><img style="width: 35px; height: 35px;" src="images/h'+re+'.ico" />'+JsonData[i].foodclass_name+'</div>');
             }
-            $("#left-nav div").click(function () {
-                $("#left-nav div").removeClass("active");
-                showFood(this);
-                $(this).addClass("active");
-            })
+                //点击事件
+                $("#info div").click(function () {
+                    $("#info div").removeClass("active");
+                    showFood(this);
+                    $(this).addClass("active");
+                })
+
+
+            //进入网页让第一个显示
             setTimeout(function () {
-                $("#left-nav div:first").click();
+                $("#info div:first").click();
             },1)
-            $("#left-nav div:first").addClass("active");
+            $("#info div:first").addClass("active");
         }
     })
 })
-
 
 //点击菜品
 function showFood(now){
     var x=1;
     var oDiv = $(now).text();
-    $("#right-forma").empty();
+    $("#dishes").empty();
     $.ajax({
         type:"POST",
         url:"/food/wherefoodclassgetlist",
@@ -40,15 +70,16 @@ function showFood(now){
         success:function (data) {
             var JsonData = eval(data);
             for(var i = 0 ; i<JsonData.length;i++){
-                $("#right-forma").append("<div class='infoDiv-right'><img class='img-right' src='"+JsonData[i].food_image+"'/><span classs='about-right'>"+JsonData[i].food_miaoshu+"</span><span class='name-right'>"+JsonData[i].food_name+"</span><span class='price-right'>"+'$'+JsonData[i].food_jiage+"</span><a class='reduce-right'>一</a><input  class='text-right'type='text' value='1'/><a class='add-right'>十</a><button class='btn-right'>添加</button></div>");
+                $("#dishes").append("<div class='infoDiv-right'><img class='img-right' src='"+JsonData[i].food_image+"'/><span classs='about-right'>"+JsonData[i].food_miaoshu+"</span><span class='name-right'>"+JsonData[i].food_name+"</span><span class='price-right'>"+'$'+JsonData[i].food_jiage+"</span><a class='reduce-right'>一</a><input  class='text-right'type='text' value='1'/><a class='add-right'>十</a><button class='btn-right'>添加</button></div>");
             }
 
-            //给左右按钮加点击事件
+            // 给左右按钮加点击事件
             $('.infoDiv-right').iVaryVal({},function (value,index) {
             });
-            //为button注册事件
+
+            // 为button注册事件
             $(".infoDiv-right button").click(function () {
-                //点击弹出事件
+
 
                 $(".shopping-num").fadeIn();
                 $(".shopping-num").text(++Num);
@@ -83,11 +114,9 @@ function showFood(now){
                         }
                     }
                 }
-                console.log(food);
-
             })
 
-
+           // 点击跳转到购车页面
             $("#shopping-btn").click(function () {
                 $.ajax({
                     type:"POST",
@@ -107,6 +136,8 @@ function showFood(now){
         }
     });
 }
+
+
 
 $.fn.iVaryVal =function addNum(iSet,index) {
     iSet = $.extend({
@@ -139,26 +170,28 @@ $.fn.iVaryVal =function addNum(iSet,index) {
             $CB.val = iSet.Input.eq(i).val();
             $CB.index = i;
             //回调函数
-						if(typeof CallBack == 'function') {
-							CallBack($CB.val, $CB.index);
-						}
+            if(typeof CallBack == 'function') {
+                CallBack($CB.val, $CB.index);
+            }
         });
     });
 }
 
 
-
-//测试
+//保存食物
 var foodimage;
 var foodname;
 var foodshuliang;
 var foodjiage;
+
 function addfood(foodimage,foodname,foodshuliang,foodjiage) {
     this.foodimage=foodimage;
     this.foodname=foodname;
     this.foodshuliang=foodshuliang;
     this.foodjiage=foodjiage;
 }
-var food=[];
 
+var food=[];
 var Num = 0;
+
+var arr = new Array(["images/h1.ico","images/h2.ico","images/h3.ico","images/h4.ico","images/h5.ico","images/h6.ico","images/h7.ico","images/h8.ico","images/h9.ico"]);

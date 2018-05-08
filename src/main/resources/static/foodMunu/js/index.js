@@ -36,7 +36,7 @@ $(function() {
             $("#food-namea").text(JsonData[0].foodspecialname);
             $("#food-abouta").text(JsonData[0].foodspecialmiaoshu);
             $("#food-moneya").text("$"+JsonData[0].foodspecialjiage+".00");
-            $("#food-imga").css("background","url("+JsonData[0].foodspecialimage+")");
+            // $("#food-imga").css("background","url("+JsonData[0].foodspecialimage+")");
         }
     })
 
@@ -55,7 +55,7 @@ $(function() {
             $("#food-nameb").text(JsonData[1].foodspecialname);
             $("#food-aboutb").text(JsonData[1].foodspecialmiaoshu);
             $("#food-moneyb").text("$"+JsonData[1].foodspecialjiage+".00");
-            $("#food-imgb").css("background","url("+JsonData[1].foodspecialimage+")");
+            // $("#food-imgb").css("background","url("+JsonData[1].foodspecialimage+")");
         }
     })
 
@@ -74,7 +74,7 @@ $(function() {
             $("#food-namec").text(JsonData[2].foodspecialname);
             $("#food-aboutc").text(JsonData[2].foodspecialmiaoshu);
             $("#food-moneyc").text("$"+JsonData[2].foodspecialjiage+".00");
-            $("#food-imgc").css("background","url("+JsonData[2].foodspecialimage+")");
+            // $("#food-imgc").css("background","url("+JsonData[2].foodspecialimage+")");
         }
     })
 
@@ -93,7 +93,7 @@ $(function() {
             $("#food-named").text(JsonData[3].foodspecialname);
             $("#food-aboutd").text(JsonData[3].foodspecialmiaoshu);
             $("#food-moneyd").text("$"+JsonData[3].foodspecialjiage+".00");
-            $("#food-imgd").css("background","url("+JsonData[3].foodspecialimage+")");
+            // $("#food-imgd").css("background","url("+JsonData[3].foodspecialimage+")");
         }
     })
 

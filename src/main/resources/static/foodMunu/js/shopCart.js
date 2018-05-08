@@ -7,7 +7,6 @@ $(function () {
      for (var i = 0; i<jsonfooddata.length;i++){
             var price = parseInt(jsonfooddata[i].foodjiage);
             allPrice+=price;
-
      }
         $("#payMenta").text("$"+allPrice);
         $("#payMentb").text("$"+allPrice);
@@ -54,7 +53,8 @@ $(function () {
 
     //点击付款
     $(".modal-finish").click(function () {
-            //得到桌号
+
+            // 得到桌号
             var zhuohao=$.cookie('foodzuohao');
             //得到食物
             jsonfooddata

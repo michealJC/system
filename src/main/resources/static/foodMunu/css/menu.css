@@ -27,8 +27,9 @@ body {
 	left: 2px;
 	right: 80%;
 	border: 1px solid #00C5B5;
-	color: #afafaf;
+	color: #000000;
 	overflow: auto;
+	font-weight: 500;
 }
 
 .nav-left .dish {
@@ -39,7 +40,7 @@ body {
 	margin: auto;
 	margin-top: 10px;
 	border-bottom: dashed #d1d1d1 0.1em;
-	font-size: 20px;
+	font-size: 30px;
 }
 
 .nav-left .dish .dish-name {

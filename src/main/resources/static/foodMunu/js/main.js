@@ -19,6 +19,4 @@ $(function() {
 		window.setTimeout(clickLocation, 300);
 	});
 
-
-
 });

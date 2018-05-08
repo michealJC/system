@@ -200,7 +200,7 @@
 		position: fixed;
 		z-index: 9999;
 		background: whitesmoke;
-		right: -150px;
+		right: 0px;
 		bottom: 150px;
 		/*opacity: 0.7;*/
 		cursor: pointer;

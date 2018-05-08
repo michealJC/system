@@ -3,37 +3,61 @@
 
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<mate name="viewport" content="width=device-width, initial-scale=1">
-			<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-			<script src="js/JQuery.js" type="text/javascript" charset="utf-8"></script>
-			<link rel="stylesheet" type="text/css" href="css/mian-one.css" />
-			<title></title>
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<script src="js/JQuery.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/mian-one.css" />
+		<script src="js/main-one.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
 	</head>
 
 	<body>
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-lg-12">
-					<div class="col-xs-4 col-sm-4 col-lg-4">
-						<div class="col-xs-12 col-sm-12 col-lg-12 left-nav">
-							<div class="left-one">121111111111</div>
-							<div class="left-tow">222222222</div>
-							<div class="left-three">333333333</div>
-							<div class="left-for">4444444444</div>
+				<div class="col-xs-12 col-sm-12 col-md-12">
+					<div class="col-xs-4 col-sm-4 col-md-4">
+						<div class="col-xs-12 col-sm-12 col-md-12 left-nav" id="info">
+							<p style="height: 5px;"></p>
+							<!--<div id="a1" class="active"><img style="width: 35px; height: 35px;" src="images/h10.ico" />特色菜色</div>-->
+
 						</div>
 					</div>
+
 					<div class="col-xs-8 col-sm-8 col-lg-8">
-						<div class="col-xs-12 col-sm-12 col-lg-12 right-box">
-							<div class="col-xs-6 col-sm-3 col-lg-3">
-								<div class="right-one">dwadwadwa</div>
+						<div class="col-xs-12 col-sm-12 col-md-12 right-box">
+							<div class="col-xs-10 col-sm-6 col-md-4" id="dishes">
+
 							</div>
 
 						</div>
 					</div>
+
+					<!--<div class="col-xs-8 col-sm-8 col-lg-8">-->
+						<!--<div class="col-xs-12 col-sm-12 col-md-12 right-box">-->
+							<!--<div class="col-xs-12 col-sm-6 col-md-4" id="dishes">-->
+
+							<!--</div>-->
+
+						<!--</div>-->
+					<!--</div>-->
 				</div>
 			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 shopp">
+			<div class="shopping" id="js-shopping">
+				<img id="shopping-btn" style="display: block; width: 80px;" src="images/gouwuche.png" />
+				<div class="shopping-hd" id="js-shopping-hd">购物车
+					<div class="shopping-num"></div>
+				</div>
+			</div>
+			</div>
 		</div>
+
+
+
 	</body>
 	<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
 
