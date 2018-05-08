@@ -45,7 +45,7 @@ public class Foodshop_controller {
     @RequestMapping("/foodshopmangger2")
     public ModelAndView foodshopmangger2(){
         ModelAndView modelAndView=new ModelAndView();
-        modelAndView.setViewName("shopCart");
+        modelAndView.setViewName("shopCart_one");
         modelAndView.addObject("shopdata",foodshops);
         return modelAndView;
     }

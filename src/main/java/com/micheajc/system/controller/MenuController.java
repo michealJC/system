@@ -59,7 +59,6 @@ public class MenuController {
                 JSONObject jsonObject=new JSONObject(data);
                 String id=jsonObject.getString("id");
                 //清空之前把订单转到历史订单中
-
                 menuservice.updatetable(id);
                 //根据菜品清空
                 menuservice.delectfoodByzuohao(id);
