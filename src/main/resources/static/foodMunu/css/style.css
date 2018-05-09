@@ -3145,7 +3145,6 @@ input.email {
 	.bottom-left h3 {
 		font-size: 22px;
 		line-height: 30px;
-		`
 	}
 	h3.heading,
 	h2.heading {
@@ -4389,7 +4388,7 @@ input.email {
 .Special {
 	margin-top: 1px;
 	/*background: url(../images/1.jpg);*/
-	background-color: #C0C0C0 margin-top: 2px;
+	background-color: #C0C0C0; margin-top: 2px;
 	width: 100%;
 	/*border: 1px solid black;*/
 	box-shadow: 0px 0px 12px 0px #666;

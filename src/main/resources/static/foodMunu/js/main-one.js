@@ -28,15 +28,15 @@ $(function() {
         type:"POST",
         url:"/foodclass/getfoodclass",
         error:function () {
-            alert("传值错误22");
+            // alert("亲，您刷新过快");
         },
         success:function (data) {
             var JsonData = eval(data);
 
             for(var i = 0 ; i<JsonData.length;i++) {
                 //添加左侧导航
-                var re=Math.floor(Math.random()*9+1);
-                $("#info").append('<div><img style="width: 35px; height: 35px;" src="images/h'+re+'.ico" />'+JsonData[i].foodclass_name+'</div>');
+                var re=Math.floor(Math.random()*13+1);
+                $("#info").append('<div class="col-xs-12 col-md-12"><img style="width: 35px; height: 35px;" src="images/h'+re+'.ico" />'+JsonData[i].foodclass_name+'</div>');
             }
                 //点击事件
                 $("#info div").click(function () {
@@ -132,7 +132,7 @@ function showFood(now){
             });
         },
         error:function () {
-            alert("错误333");
+            // alert("亲，您刷新过快");
         }
     });
 }
@@ -194,4 +194,4 @@ function addfood(foodimage,foodname,foodshuliang,foodjiage) {
 var food=[];
 var Num = 0;
 
-var arr = new Array(["images/h1.ico","images/h2.ico","images/h3.ico","images/h4.ico","images/h5.ico","images/h6.ico","images/h7.ico","images/h8.ico","images/h9.ico"]);
+var arr = new Array(["images/h1.ico","images/h2.ico","images/h3.ico","images/h4.ico","images/h5.ico","images/h6.ico","images/h7.ico","images/h8.ico","images/h9.ico","images/h10.ico","images/h11.ico","images/h12.ico","images/h13.ico","images/h14.ico"]);
